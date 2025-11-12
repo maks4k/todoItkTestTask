@@ -1,0 +1,31 @@
+.editInputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.editInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  height: 40px;
+  padding: 0 16px;
+  background-color: #f7f7f7;
+  color: #222;
+  cursor: auto;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  flex: 1;
+}
+.editButton {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.editInputbutton{
+    cursor: pointer;
+    background-color: #fff;
+}

@@ -1,0 +1,28 @@
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  height: 40px;
+  padding: 0 16px;
+  background-color: #f7f7f7;
+  color: #222;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.todoItem:hover {
+  background-color: #e0e0e0;
+  color: #000;
+}
+.completedText {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+.todoItemWrapper{
+  display: flex;
+}
