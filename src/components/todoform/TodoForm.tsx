@@ -1,41 +1,29 @@
-import { useState } from "react";
+
 import style from "./todoForm.module.css";
 import { FaFilter } from "react-icons/fa";
 import type { FilterType } from "../App";
+import { useTodoForm } from "../../hooks/useTodoForm";
 
-type todoFotmProps = {
+export type todoFotmProps = {
   onAddTask: (title: string) => void;
   activeTask: number;
   handleFilterChange: (filter: FilterType) => void;
 };
+
 
 export const TodoForm = ({
   onAddTask,
   activeTask,
   handleFilterChange,
 }: todoFotmProps) => {
-  const filterBtn = ["Все", "Активные", "Выполненные"];
-  const filterMap = {
-    Все: "all",
-    Активные: "active",
-    Выполненные: "completed",
-  } as const;
-  const [isVisibaleFilter, setIsVisibaleFilter] = useState(false);
-  const [inputValue, setInputValue] = useState("");
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.target.value);
-    console.log(event.target.value);
-  };
 
-  const filterHandler = () => {
-    setIsVisibaleFilter((prev) => !prev);
-  };
-  const handleTask = () => {
-    if (inputValue.trim()) {
-      onAddTask(inputValue);
-      setInputValue("");
-    }
-  };
+
+  
+const{filterBtn,filterMap,isVisibaleFilter,handleChange,filterHandler,handleTask,inputValue
+}=useTodoForm({onAddTask})
+
+
+
 
   return (
     <div className={style.todoForm}>

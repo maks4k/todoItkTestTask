@@ -1,4 +1,4 @@
-import type { IdataTasks } from "../todolist/TodoList";
+
 import { GoCheckCircle } from "react-icons/go";
 import { MdOutlineRadioButtonUnchecked } from "react-icons/md";
 
@@ -7,6 +7,7 @@ import { EditTask } from "./EditTask";
 import { DelitionTask } from "./DelitionTask";
 import { useState } from "react";
 import { InputEdit } from "./InputEdit";
+import type { IdataTasks } from "../App";
 
 type TodoItemProps = {
   item: IdataTasks;

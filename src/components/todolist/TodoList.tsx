@@ -4,7 +4,7 @@ import style from "./todoList.module.css";
 
 
 
-type PropsTasks={
+export type PropsTasks={
   data:IdataTasks[];
   changeChecked: (id: number) => void;
   delitionTask:(id:number)=>void;
